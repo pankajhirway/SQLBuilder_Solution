@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/pankaj.hirway@avalara.com/.dotnet/store/|arch|/|tfm|",
+      "/Users/pankaj.hirway@avalara.com/.nuget/packages"
+    ]
+  }
+}
