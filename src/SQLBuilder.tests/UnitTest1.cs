@@ -15,7 +15,7 @@ namespace SQLBuilder.tests
             Queries queryInput = JsonConvert.DeserializeObject<Queries>(input);
             QueryBuilder sqlBuilder = new SQLQueryBuilder(queryInput);
             sqlBuilder.Construct(Utility.GetEnumerableOfType<IOperator>().ToList());
-            Assert.Equal("SELECT column1,column3,column4,column2, FROM TestTable WHERE  column1 IN (value1,value2) AND (column3 LIKE value1 OR column3 LIKE value2 ) AND (column4 LIKE value1 ) AND (column2 = value1 OR column2 = value2 ) ", sqlBuilder.QueryString);
+            Assert.Equal("SELECT column1,column3,column4,column2, FROM TestTable WHERE (column2 = value1 OR column2 = value2 ) AND  column1 IN (value1,value2) AND (column3 LIKE value1 OR column3 LIKE value2 ) AND (column4 LIKE value1 ) ", sqlBuilder.QueryString);
         }
 
         [Fact]
